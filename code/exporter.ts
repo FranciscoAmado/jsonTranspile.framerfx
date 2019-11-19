@@ -1,7 +1,8 @@
 // import { ComponentArray } from "./Props";
 
 // const fs = require("fs");
-import { writeFileSync, readFileSync, WriteStream } from "fs";
+// import { writeFileSync } from "fs";
+import * as fs from "fs";
 
 let DummyData = [
   {
@@ -27,8 +28,10 @@ let DummyData = [
 ];
 
 function Exporter() {
+  console.log("fs", fs);
+
   console.log("before");
-  writeFileSync("mynewfile1addisontest.txt", "Hello content!");
+  // writeFileSync("mynewfile1addisontest.txt", "Hello content!");
   console.log("after");
 }
 
