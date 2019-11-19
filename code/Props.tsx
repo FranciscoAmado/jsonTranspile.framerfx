@@ -1,6 +1,9 @@
+import * as React from "react";
 import { Override } from "framer";
 
-export let ComponentArray = [];
+// const [componentArray, setComponentArray] = React.useState([]);
+
+let componentArray = [];
 
 export function Button(props): Override {
   let ButtonData = {
@@ -14,11 +17,11 @@ export function Button(props): Override {
     data: [{ key: "text", value: props.text }]
   };
 
-  ComponentArray.push(ButtonData);
-
-  //   console.log("Component Array", ComponentArray);
-
+  componentArray.push(ButtonData);
+  console.log(componentArray);
+  // setComponentArray([...componentArray, ButtonData]);
   return ButtonData;
+  return {};
 }
 
 export function Text(props): Override {
@@ -32,6 +35,25 @@ export function Text(props): Override {
     ],
     data: [{ key: "text", value: props.text }]
   };
-
   return TextData;
+}
+
+// showing data in console
+function collectData() {
+  console.log("From Export Give Data", componentArray);
+  return componentArray;
+}
+setTimeout(collectData, 2000);
+
+/**
+ *
+ *
+ *
+ * Showing data from overrides
+ *
+ *
+ * */
+
+export function ShowData(): Override {
+  return <h1>{JSON.stringify(componentArray)}</h1>;
 }
