@@ -13,5 +13,8 @@
     "id": "36305002-28d6-43ef-8a5a-8240dab47058"
   },
   "author": "Addison Schultz",
-  "dependencies": {}
+  "dependencies": {
+    "react-clipboard.js": "^2.0.16",
+    "use-global-hook": "^0.1.12"
+  }
 }
