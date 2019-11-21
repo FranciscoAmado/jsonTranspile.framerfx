@@ -1,43 +1,50 @@
 import * as React from "react"
-import {
-    useImperativeHandle,
-    useState,
-    useEffect,
-    forwardRef,
-    FunctionComponent,
-} from "react"
 import { Frame, FrameProps, addPropertyControls, ControlType } from "framer"
 //@ts-ignore
 import { Button } from "./Props.tsx"
 import Clipboard from "react-clipboard.js"
 
+import { useGlobal } from "./JSONViewer"
+
 type Props = Partial<FrameProps> &
     Partial<{
+        stateValue: string
         displayOptions: string
         buttonType: string
         stretch: string
     }>
 
-export const MyButton: FunctionComponent<Props> = (props: Props) => {
-    const [displayOptions, setDisplayOptions] = useState(props.displayOptions)
+export const MyButton = (props: Props) => {
+
     const { ...rest } = props
+    const [globalState, globalActions] = useGlobal();
 
-    // useEffect(() => {
-    //     props.ref.current = { displayOptions }
-    // }, [displayOptions])
-
-    const handleDisplayOptionsInput = () => {
-        setDisplayOptions("new pool")
+    let ButtonData = {
+        id: props.id,
+        type: "button_component",
+        displayOptions: [
+            { key: "button-type", value: props.buttonType },
+            { key: "stretch", value: props.stretch },
+            { key: "horizontal-alignment", value: "center" },
+        ],
+        data: [{ key: "text", value: "dead" }],
     }
 
-    console.log("count ", displayOptions)
-    console.log("MyButton ref ", props)
+    React.useEffect(() => {
+        console.log("MyButton useEffect", globalState)
+    })
+
+    React.useLayoutEffect(() => {
+        globalActions.addItem(ButtonData)
+        console.log("MyButton useLayoutEffect", globalState)
+    }, [])
+
+    console.log("MyButton props ", props)
 
     return (
-        <Frame {...rest} onChange={handleDisplayOptionsInput}>
+        <Frame {...rest}>
             <h1>{props.buttonType}</h1>
             <h1>{props.stretch}</h1>
-            <h1>{displayOptions}</h1>
         </Frame>
     )
 }

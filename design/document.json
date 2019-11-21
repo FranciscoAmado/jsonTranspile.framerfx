@@ -326,7 +326,7 @@
         "id" : "NAetzFtgp",
         "intrinsicHeight" : 280,
         "intrinsicWidth" : 300,
-        "left" : -650,
+        "left" : -682,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -342,7 +342,7 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -899,
+        "top" : -903,
         "visible" : true,
         "width" : 775,
         "widthType" : 0

@@ -1,5 +1,29 @@
 import * as React from "react"
-import { Frame, FrameProps, addPropertyControls, ControlType } from "framer"
+import {
+    Frame,
+    FrameProps,
+    addPropertyControls,
+    ControlType,
+    useCycle,
+    Data,
+} from "framer"
+import globalHook from 'use-global-hook';
+ 
+const initialState = {
+  items: [],
+};
+ 
+const actions = {
+  addItem: (store, data) => {
+    console.log("data", data);
+    
+    const newItems = store.state.items.concat([data]);
+    console.log("newItems", JSON.stringify(newItems));
+    store.setState({ items: newItems });
+  },
+};
+ 
+export const useGlobal = globalHook(React, initialState, actions);
 
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
@@ -11,8 +35,8 @@ type Props = Partial<FrameProps> &
 
 export function JSONViewer(props) {
     const { target, ...rest } = props
-
     const [node] = target
+    const [globalState, globalActions] = useGlobal();
 
     if (!node) {
         return (
@@ -28,9 +52,27 @@ export function JSONViewer(props) {
     console.log("node", node)
     // console.log(node.props.children[0].props.displayOptions)
 
+    React.useLayoutEffect(() => {
+        console.log("JSONViewer useLayoutEffect", globalState.items)
+    }, [])
+
     return (
         <Frame {...rest}>
-            <div style={containerStyle}>{node}</div>
+            <div
+                style={{
+                    ...containerStyle,
+                    ...props.style,
+                }}
+            >
+                <p>
+                    JSON:
+                    {console.log("JSON", JSON.stringify(globalState.items))}
+                    {JSON.stringify(globalState.items)}
+                </p>
+                <Frame {...rest}>
+                    {React.cloneElement(node, {})}
+                </Frame>
+            </div>
         </Frame>
     )
 }
@@ -76,13 +118,8 @@ const emptyState: React.CSSProperties = {
 }
 
 const containerStyle: React.CSSProperties = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    overflow: "scroll",
-    padding: "0 8px",
+    display: "flex",
+    flexWrap: "wrap",
 }
 
 const clipboard: React.CSSProperties = {
