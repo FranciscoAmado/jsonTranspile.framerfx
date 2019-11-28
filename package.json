@@ -15,6 +15,7 @@
   "author": "Addison Schultz",
   "dependencies": {
     "react-clipboard.js": "^2.0.16",
+    "react-json-prettify": "^0.1.4",
     "use-global-hook": "^0.1.12"
   }
 }

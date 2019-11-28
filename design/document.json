@@ -21,7 +21,7 @@
 
             ],
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Farfetch.tsx_MyButton",
+            "codeComponentIdentifier" : ".\/Example.tsx_MyButton",
             "codeComponentProps" : {
               "buttonType" : "Primary",
               "stretch" : "fill"
@@ -42,7 +42,7 @@
             "fillType" : "color",
             "height" : 200,
             "heightType" : 0,
-            "id" : "ruihqUYNn",
+            "id" : "Pjb0fU0s4",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "left" : 73,
@@ -76,10 +76,10 @@
 
             ],
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Farfetch.tsx_MyButton",
+            "codeComponentIdentifier" : ".\/Example.tsx_MyButton",
             "codeComponentProps" : {
-              "buttonType" : "secondary",
-              "stretch" : "stretch"
+              "buttonType" : "Primary",
+              "stretch" : "fill"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -97,7 +97,7 @@
             "fillType" : "color",
             "height" : 200,
             "heightType" : 0,
-            "id" : "NVuAGIjEC",
+            "id" : "XCLExJ_yn",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "left" : null,
@@ -131,10 +131,10 @@
 
             ],
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Farfetch.tsx_MyButton",
+            "codeComponentIdentifier" : ".\/Example.tsx_MyButton",
             "codeComponentProps" : {
-              "buttonType" : "Tertiary",
-              "stretch" : "peter"
+              "buttonType" : "Primary",
+              "stretch" : "fill"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -152,7 +152,7 @@
             "fillType" : "color",
             "height" : 200,
             "heightType" : 0,
-            "id" : "FhhV8Mxh2",
+            "id" : "r8kMYvoOz",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "left" : 73,
@@ -186,10 +186,10 @@
 
             ],
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Farfetch.tsx_MyButton",
+            "codeComponentIdentifier" : ".\/Example.tsx_MyButton",
             "codeComponentProps" : {
               "buttonType" : "Primary",
-              "stretch" : "addison "
+              "stretch" : "fill"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -207,7 +207,7 @@
             "fillType" : "color",
             "height" : 200,
             "heightType" : 0,
-            "id" : "E_hcAcgmC",
+            "id" : "oOH7dymCt",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "left" : null,
@@ -241,10 +241,10 @@
 
             ],
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Farfetch.tsx_MyButton",
+            "codeComponentIdentifier" : ".\/Example.tsx_MyButton",
             "codeComponentProps" : {
               "buttonType" : "Primary",
-              "stretch" : "iain"
+              "stretch" : "fill"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -262,7 +262,7 @@
             "fillType" : "color",
             "height" : 200,
             "heightType" : 0,
-            "id" : "F8eRCV96S",
+            "id" : "zfuwggj9f",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "left" : 73,
@@ -327,13 +327,13 @@
         "originalid" : null,
         "parentid" : "TpgS38FSr",
         "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
+        "radius" : 26,
+        "radiusBottomLeft" : 26,
+        "radiusBottomRight" : 26,
         "radiusIsRelative" : false,
         "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
+        "radiusTopLeft" : 26,
+        "radiusTopRight" : 26,
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
@@ -354,9 +354,7 @@
         "clip" : true,
         "codeComponentIdentifier" : ".\/JSONViewer.tsx_JSONViewer",
         "codeComponentProps" : {
-          "target" : [
 
-          ]
         },
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
@@ -372,7 +370,7 @@
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
         "fillType" : "color",
-        "height" : 280,
+        "height" : 812,
         "heightType" : 0,
         "id" : "dUznC7MYQ",
         "intrinsicHeight" : 280,
@@ -395,7 +393,7 @@
         "rotation" : 0,
         "top" : -2052,
         "visible" : true,
-        "width" : 580,
+        "width" : 725,
         "widthType" : 0
       }
     ],

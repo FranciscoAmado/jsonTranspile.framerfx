@@ -1,8 +1,5 @@
 import * as React from "react";
 import { Frame, FrameProps, addPropertyControls, ControlType } from "framer";
-//@ts-ignore
-import { Button } from "./Props.tsx";
-import Clipboard from "react-clipboard.js";
 
 import { useGlobal } from "./JSONViewer";
 
